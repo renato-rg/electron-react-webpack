@@ -19,6 +19,10 @@
     "electron-reload": "^1.1.0",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.9.0",
+    "semantic-ui-css": "^2.2.14",
+    "semantic-ui-react": "^0.78.2",
+    "style-loader": "^0.20.1",
+    "url-loader": "^0.6.2",
     "webpack": "^2.2.1"
   },
   "dependencies": {
