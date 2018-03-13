@@ -4,9 +4,9 @@ module.exports = {
 
     watch: true,
 
-    target: 'electron',
+    target: 'electron-main',
 
-    entry: './app/src/entry.js',
+    entry: './app/src/renderer_process.js',
 
     output: {
         path: __dirname + '/app/build',
@@ -26,7 +26,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract({
-                    loader: 'css-loader'
+                  loader: 'css-loader',
+                  options: {
+                    modules: true
+                  }
                 })
             },
             {
@@ -44,8 +47,11 @@ module.exports = {
             filename: 'bundle.css',
             disable: false,
             allChunks: true
-        }
-    )
-]
+        })
+    ],
+
+    resolve: {
+      extensions: ['.js', '.json', '.jsx']
+    }
 
 }

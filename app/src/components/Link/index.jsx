@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {shell} from 'electron'
-import styles from '../styles/local.css'
+import styles from './styles.css'
 
 export default class Link extends Component {
 
@@ -9,6 +9,7 @@ export default class Link extends Component {
     }
 
     render () {
+      console.log(styles);
         return (
             <a href='#' onClick={ () => {this.link(this.props.to)} } className={styles.link} >
                 {this.props.children}

@@ -7,27 +7,27 @@
 
 
 /*
- * Global CSS goes here
+ * Global CSS goes here, it requires to use :global before each style
  */
-html {
+:global html {
     height: 100%;
 }
-body {
+:global body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     margin: auto;
 }
-#app {
+:global #app {
     color: #2c3e50;
     max-width: 600px;
     font-family: Source Sans Pro, Helvetica, sans-serif;
     text-align: center;
 }
-#app p {
+:global #app p {
     text-align: justify;
 }
-.hello {
+:global .hello {
     color: var(--primary-color);
 }

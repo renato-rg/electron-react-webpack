@@ -1,7 +1,7 @@
 # electron-react-webpack
-Try this Electron/React/Webpack2 template for a quick development and prototyping.
+Try this Electron & React 16 & Webpack 4 template for a quick development and prototyping.
 
-![w10 sample](https://cloud.githubusercontent.com/assets/11739632/21486843/dc5e56b8-cbbb-11e6-8891-c5a72e46d8a7.png)
+![w10 sample](https://user-images.githubusercontent.com/11739632/37350993-59ad48d4-26da-11e8-9ac5-d3539cf1e2f9.PNG)
 
 ## Install
 ``` bash
@@ -15,30 +15,26 @@ $ cd electron-react-webpack
 $ npm install
 ```
 
-## Usage
-Run this two commands in two different prompts to start developing with hot reloading.
+## Develop
+Just run this command to start developing with hot reloading.
 ``` bash
-# Webpack builds once and watches for changes to apply
-$ npm run dev
-
-# Start electron app
 $ npm start
 ```
 
 ## What's included
-- JSX support for React using Babel.
-- ES6 native support for React via Node (this is Electron, no need for Babel to transpile ES6).
+- JSX support for React.
 - CSS modules support.
-- JS, CSS and assets bundling with hot reloading via Webpack 2.
+- JS, CSS and assets automatic bundling.
+- Hot reloading via Webpack 4.
 
 
 ## Folder structure
 ```
-├── electron-react-webpack/             # Your project's name
+├── electron-react-webpack/             # Your project's name, you can rename it
 
     ├── app/
 
-        ├── build/                      # Webpack 2 will create and update this folder
+        ├── build/                      # Webpack 4 will manage this folder for you
             ├── bundle.css              # Bundled CSS
             ├── bundle.js               # Bundled JS
             ├── ...                     # Your images will be copied here
@@ -51,21 +47,22 @@ $ npm start
                 ├── webpack.png
 
             ├── components/             # React Components
-                ├── Link.jsx
-                ├── Logo.jsx
+                ├── Link/               # To keep them modularized follow this structure:
+                    ├── index.jsx       # Your component's React code
+                    ├── styles.css      # Your component's scoped CSS
+                ├── Logo/
+                    ├── index.jsx
+                    ├── styles.css
 
-            ├── styles/                 
-                ├── Local.css           # Local CSS
-                ├── Global.css          # Global CSS and constants
+            ├── App.jsx                 # React main component where everything is tied up
+            ├── renderer_process.js     # Electron's renderer-process, where you React app is called.
+            ├── global.css              # Global CSS and global constants go here
 
-            ├── App.jsx                 # React main component
-            ├── entry.js                # App entry. Your global JS can go here
+        ├── index.html                  # This HTML only uses build/ folder's files
 
-        ├── index.html                  # Single Page Application HTML, it only uses build's files
-
-    ├── main.js                         # Electron app
+    ├── main_process.js                 # Electron's main process. Whole app is launched from here
     ├── package.json
-    ├── webpack.config.js               # Webpack 2 setup
+    ├── webpack.config.js               # Webpack 4 setup
 ```
 
 ## Related

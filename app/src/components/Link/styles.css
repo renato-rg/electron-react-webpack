@@ -1,17 +1,13 @@
 /*
- * Use :local before each CSS class to be scoped
+ * Every class name will be hashed so it can be used their own component scoped
  * Use classes instead of ids
  */
 
-:local .tone {
+.tone {
     color: var(--primary-color);    /* Using global constants example */
 }
 
-:local .link {
+.link {
     composes: tone;                 /* Composition example */
     text-decoration: none;
-}
-
-:local .logo {
-    height: 100px;
 }

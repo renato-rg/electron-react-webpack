@@ -1,0 +1,8 @@
+/*
+ * Every class name will be hashed so it can be used their own component scoped
+ * Use classes instead of ids
+ */
+
+.logo {
+    height: 100px;
+}
