@@ -4,7 +4,7 @@ module.exports = {
 
     watch: true,
 
-    target: 'electron-main',
+    target: 'electron-renderer',
 
     entry: './app/src/renderer_process.js',
 
