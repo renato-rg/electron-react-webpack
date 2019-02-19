@@ -1,7 +1,9 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const ENV = process.env.NODE_ENV || 'development';
+
 module.exports = {
-    watch: true,
+    watch: ENV === 'development',
     target: 'electron-renderer',
     entry: './app/src/renderer_process.js',
     output: {

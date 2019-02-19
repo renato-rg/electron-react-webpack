@@ -60,7 +60,7 @@ $ npm start
 
         ├── index.html                  # This HTML only uses build/ folder's files
 
-    ├── electronConfig.js               # Electron's configuration. Whole app is launched from here
+    ├── main.js               # Electron's configuration. Whole app is launched from here
     ├── package.json
     ├── webpack.config.js               # Webpack 4 setup
 ```
