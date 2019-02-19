@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel bundle serve",
     "bundle": "webpack --mode development",
+    "build:production": "webpack --mode production",
     "serve": "electron ."
   },
   "author": "J. Renato Ramos González <renato.etc.etc.etc@gmail.com>",
