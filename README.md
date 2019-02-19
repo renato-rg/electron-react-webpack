@@ -1,7 +1,5 @@
 # electron-react-webpack
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/MrRefactoring/electron-react-webpack.svg)](https://greenkeeper.io/)
-
 Try this Electron & React 16 & Webpack 4 template for a quick development and prototyping.
 
 ![w10 sample](https://user-images.githubusercontent.com/11739632/37350993-59ad48d4-26da-11e8-9ac5-d3539cf1e2f9.PNG)
