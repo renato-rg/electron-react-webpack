@@ -1,5 +1,10 @@
-# electron-react-webpack
-Try this Electron & React 16 & Webpack 4 template for a quick development and prototyping.
+# Electron React Webpack template
+
+[![Build Status](https://travis-ci.com/MrRefactoring/electron-react-webpack.svg?branch=master)](https://travis-ci.com/MrRefactoring/electron-react-webpack)
+[![dependencies Status](https://david-dm.org/MrRefactoring/electron-react-webpack/status.svg)](https://david-dm.org/MrRefactoring/electron-react-webpack)
+[![devDependencies Status](https://david-dm.org/MrRefactoring/electron-react-webpack/dev-status.svg)](https://david-dm.org/MrRefactoring/electron-react-webpack?type=dev)
+
+Try this Electron 4 & React 16 & Webpack 4 template for a quick development and prototyping.
 
 ![w10 sample](https://user-images.githubusercontent.com/11739632/37350993-59ad48d4-26da-11e8-9ac5-d3539cf1e2f9.PNG)
 
@@ -60,7 +65,7 @@ $ npm start
 
         ├── index.html                  # This HTML only uses build/ folder's files
 
-    ├── main.js               # Electron's configuration. Whole app is launched from here
+    ├── main.js                         # Electron's configuration. Whole app is launched from here
     ├── package.json
     ├── webpack.config.js               # Webpack 4 setup
 ```
