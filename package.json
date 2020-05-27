@@ -13,7 +13,7 @@
   "repository": "mrrefactoring/electron-react-webpack",
   "license": "WTFPL",
   "devDependencies": {
-    "@babel/core": "^7.9.6",
+    "@babel/core": "^7.10.0",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.10.0",
     "babel-loader": "8.1.0",
