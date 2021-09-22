@@ -1,34 +1,38 @@
 {
   "name": "electron-react-webpack",
   "version": "1.0.0",
-  "description": "Electron 9 + React 16 + Webpack 4 template.",
+  "description": "Electron 15 + React 17 + Webpack 5 template.",
   "main": "main.js",
   "scripts": {
-    "start": "npm-run-all --parallel bundle serve",
-    "bundle": "cross-env NODE_ENV=development webpack --mode development",
-    "build:production": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "npm-run-all --parallel build:watch serve",
+    "build": "cross-env NODE_ENV=development webpack",
+    "build:watch": "npm run build -- --watch",
+    "build:production": "cross-env NODE_ENV=production webpack",
     "serve": "electron ."
   },
-  "author": "J. Renato Ramos González <renato.etc.etc.etc@gmail.com>",
-  "repository": "mrrefactoring/electron-react-webpack",
-  "license": "WTFPL",
+  "author": "Vladislav Tupikin <mrrefactoring@yandex.ru>",
+  "repository": "https://github.com/MrRefactoring/electron-react-webpack.git",
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "8.1.0",
-    "cross-env": "^7.0.2",
-    "css-loader": "^3.6.0",
-    "electron": "^9.1.0",
+    "@types/mini-css-extract-plugin": "^2.3.0",
+    "@types/node": "^16.9.6",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.3.0",
+    "electron": "^15.0.0",
     "electron-reload": "^1.5.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^6.0.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.3.0",
     "npm-run-all": "^4.1.5",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
