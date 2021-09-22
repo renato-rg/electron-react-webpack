@@ -1,31 +1,38 @@
 {
   "name": "electron-react-webpack",
   "version": "1.0.0",
-  "description": "Electron + React 16 + Webpack 4 template.",
-  "main": "main_process.js",
+  "description": "Electron 15 + React 17 + Webpack 5 template.",
+  "main": "main.js",
   "scripts": {
-    "bundle": "webpack --mode development",
-    "serve": "electron .",
-    "start": "npm-run-all --parallel bundle serve"
+    "start": "npm-run-all --parallel build:watch serve",
+    "build": "cross-env NODE_ENV=development webpack",
+    "build:watch": "npm run build -- --watch",
+    "build:production": "cross-env NODE_ENV=production webpack",
+    "serve": "electron ."
   },
-  "author": "J. Renato Ramos González <renato.etc.etc.etc@gmail.com>",
-  "repository": "pastahito/electron-react-webpack",
-  "license": "WTFPL",
+  "author": "Vladislav Tupikin <mrrefactoring@yandex.ru>",
+  "repository": "https://github.com/MrRefactoring/electron-react-webpack.git",
+  "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.10",
-    "electron": "^1.8.2",
-    "electron-reload": "^1.2.2",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^1.1.10",
-    "npm-run-all": "^4.1.2",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11"
+    "@types/mini-css-extract-plugin": "^2.3.0",
+    "@types/node": "^16.9.6",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.3.0",
+    "electron": "^15.0.0",
+    "electron-reload": "^1.5.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
